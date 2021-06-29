@@ -1,4 +1,4 @@
-name: hls4ml-tutorial
+name: hls4ml-pynq-tutorial
 channels:
   - conda-forge
 dependencies:
@@ -11,7 +11,6 @@ dependencies:
     - jupyter
     - tensorflow==2.3.1
     - tensorflow_datasets
-    - git+https://github.com/fastmachinelearning/hls4ml.git#egg=hls4ml[profiling]
+    - git+https://github.com/nicologhielmetti/hls4ml@pynq-pr#egg=hls4ml[profiling]
     - git+https://github.com/google/qkeras.git#egg=qkeras
     - scikit-learn
-    - git+https://github.com/thesps/conifer.git
