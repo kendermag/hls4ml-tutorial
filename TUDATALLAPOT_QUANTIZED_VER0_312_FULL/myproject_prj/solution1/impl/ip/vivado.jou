@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Nov 14 10:25:36 2021
+# Process ID: 10291
+# Current directory: /home/nexuscore/EGYETEM/DIPLOMAMUNKA/DATA_ACQUISITION/TUDATALLAPOT_QUANTIZED_VER0_312_FULL/myproject_prj/solution1/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/nexuscore/EGYETEM/DIPLOMAMUNKA/DATA_ACQUISITION/TUDATALLAPOT_QUANTIZED_VER0_312_FULL/myproject_prj/solution1/impl/ip/vivado.log
+# Journal file: /home/nexuscore/EGYETEM/DIPLOMAMUNKA/DATA_ACQUISITION/TUDATALLAPOT_QUANTIZED_VER0_312_FULL/myproject_prj/solution1/impl/ip/vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace

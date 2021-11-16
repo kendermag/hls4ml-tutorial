@@ -1,0 +1,133 @@
+
+
+================================================================
+== Vivado HLS Report for 'shift_line_buffer_array_ap_fixed_1u_config2_s'
+================================================================
+* Date:           Sun Nov 14 10:23:44 2021
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        myproject_prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     3.245|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    0|    0|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       -|      -|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        0|      -|     128|     64|    -|
+|Multiplexer      |        -|      -|       -|      -|    -|
+|Register         |        -|      -|       1|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|     129|     64|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    +-----------------------------+--------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |            Memory           |                            Module                            | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-----------------------------+--------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |line_buffer_Array_V_1_0_0_U  |shift_line_buffer_array_ap_fixed_1u_config2_s_line_bufferbkb  |        0|  64|  32|    0|    18|   16|     1|          288|
+    |line_buffer_Array_V_1_1_0_U  |shift_line_buffer_array_ap_fixed_1u_config2_s_line_bufferbkb  |        0|  64|  32|    0|    18|   16|     1|          288|
+    +-----------------------------+--------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total                        |                                                              |        0| 128|  64|    0|    36|   32|     2|          576|
+    +-----------------------------+--------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    +-----------+---+----+-----+-----------+
+    |    Name   | FF| LUT| Bits| Const Bits|
+    +-----------+---+----+-----+-----------+
+    |ap_CS_fsm  |  1|   0|    1|          0|
+    +-----------+---+----+-----+-----------+
+    |Total      |  1|   0|    1|          0|
+    +-----------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+-----------------------------------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |                 Source Object                 |    C Type    |
++-------------------------+-----+-----+------------+-----------------------------------------------+--------------+
+|ap_clk                   |  in |    1| ap_ctrl_hs | shift_line_buffer<array<ap_fixed,1u>,config2> | return value |
+|ap_rst                   |  in |    1| ap_ctrl_hs | shift_line_buffer<array<ap_fixed,1u>,config2> | return value |
+|ap_start                 |  in |    1| ap_ctrl_hs | shift_line_buffer<array<ap_fixed,1u>,config2> | return value |
+|ap_done                  | out |    1| ap_ctrl_hs | shift_line_buffer<array<ap_fixed,1u>,config2> | return value |
+|ap_idle                  | out |    1| ap_ctrl_hs | shift_line_buffer<array<ap_fixed,1u>,config2> | return value |
+|ap_ready                 | out |    1| ap_ctrl_hs | shift_line_buffer<array<ap_fixed,1u>,config2> | return value |
+|ap_return_0              | out |   16| ap_ctrl_hs | shift_line_buffer<array<ap_fixed,1u>,config2> | return value |
+|ap_return_1              | out |   16| ap_ctrl_hs | shift_line_buffer<array<ap_fixed,1u>,config2> | return value |
+|ap_return_2              | out |   16| ap_ctrl_hs | shift_line_buffer<array<ap_fixed,1u>,config2> | return value |
+|ap_return_3              | out |   16| ap_ctrl_hs | shift_line_buffer<array<ap_fixed,1u>,config2> | return value |
+|ap_return_4              | out |   16| ap_ctrl_hs | shift_line_buffer<array<ap_fixed,1u>,config2> | return value |
+|ap_return_5              | out |   16| ap_ctrl_hs | shift_line_buffer<array<ap_fixed,1u>,config2> | return value |
+|ap_return_6              | out |   16| ap_ctrl_hs | shift_line_buffer<array<ap_fixed,1u>,config2> | return value |
+|ap_return_7              | out |   16| ap_ctrl_hs | shift_line_buffer<array<ap_fixed,1u>,config2> | return value |
+|ap_return_8              | out |   16| ap_ctrl_hs | shift_line_buffer<array<ap_fixed,1u>,config2> | return value |
+|kernel_window_8_V_write  |  in |   16|   ap_none  |            kernel_window_8_V_write            |    scalar    |
+|kernel_window_1_V_read   |  in |   16|   ap_none  |             kernel_window_1_V_read            |    scalar    |
+|kernel_window_2_V_read   |  in |   16|   ap_none  |             kernel_window_2_V_read            |    scalar    |
+|kernel_window_4_V_read   |  in |   16|   ap_none  |             kernel_window_4_V_read            |    scalar    |
+|kernel_window_5_V_read   |  in |   16|   ap_none  |             kernel_window_5_V_read            |    scalar    |
+|kernel_window_7_V_read   |  in |   16|   ap_none  |             kernel_window_7_V_read            |    scalar    |
+|kernel_window_8_V_read   |  in |   16|   ap_none  |             kernel_window_8_V_read            |    scalar    |
++-------------------------+-----+-----+------------+-----------------------------------------------+--------------+
+

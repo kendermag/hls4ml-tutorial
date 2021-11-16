@@ -1,0 +1,111 @@
+AcceleratorConfig:
+  Driver: python
+  Interface: axi_stream
+  Precision:
+    Input: float
+    Output: float
+Backend: VivadoAccelerator
+Board: pynq-z2
+ClockPeriod: 5
+HLSConfig:
+  LayerName:
+    activation:
+      Precision: ap_fixed<16,6>
+      ReuseFactor: 1
+      exp_table_t: ap_fixed<18,8,AP_RND,AP_SAT>
+      inv_table_t: ap_fixed<18,8,AP_RND,AP_SAT>
+      table_size: 1024
+    batch_normalization_4:
+      Precision:
+        bias: ap_fixed<16,6>
+        scale: ap_fixed<16,6>
+      ReuseFactor: 1
+    batch_normalization_5:
+      Precision:
+        bias: ap_fixed<16,6>
+        scale: ap_fixed<16,6>
+      ReuseFactor: 1
+    dense:
+      Precision:
+        bias: ap_fixed<16,6>
+        result: ap_fixed<16,6>
+        weight: ap_fixed<16,6>
+      ReuseFactor: 16
+    dense_linear:
+      Precision: ap_fixed<16,6>
+      ReuseFactor: 1
+      table_size: 1024
+      table_t: ap_fixed<18,8>
+    input_1:
+      Precision:
+        result: ap_fixed<16,6>
+    max_pooling2d:
+      Precision: ap_fixed<16,6>
+    max_pooling2d_1:
+      Precision: ap_fixed<16,6>
+    max_pooling2d_2:
+      Precision: ap_fixed<16,6>
+    q_activation:
+      Precision:
+        result: ap_fixed<6,1>
+      ReuseFactor: 1
+    q_activation_1:
+      Precision:
+        result: ap_fixed<6,1>
+      ReuseFactor: 1
+    q_activation_2:
+      Precision:
+        result: ap_fixed<6,1>
+      ReuseFactor: 1
+    q_activation_3:
+      Precision:
+        result: ap_fixed<6,1>
+      ReuseFactor: 1
+    q_activation_4:
+      Precision:
+        result: ap_fixed<6,1>
+      ReuseFactor: 1
+    q_activation_5:
+      Precision:
+        result: ap_fixed<6,1>
+      ReuseFactor: 1
+    q_conv2d_batchnorm:
+      Precision:
+        bias: ap_fixed<6,1>
+        weight: ap_fixed<6,1>
+      ReuseFactor: 16
+    q_conv2d_batchnorm_1:
+      Precision:
+        bias: ap_fixed<6,1>
+        weight: ap_fixed<6,1>
+      ReuseFactor: 16
+    q_conv2d_batchnorm_2:
+      Precision:
+        bias: ap_fixed<6,1>
+        weight: ap_fixed<6,1>
+      ReuseFactor: 16
+    q_conv2d_batchnorm_3:
+      Precision:
+        bias: ap_fixed<6,1>
+        weight: ap_fixed<6,1>
+      ReuseFactor: 16
+    q_dense:
+      Precision:
+        weight: ap_fixed<6,1>
+      ReuseFactor: 16
+    q_dense_1:
+      Precision:
+        weight: ap_fixed<6,1>
+      ReuseFactor: 16
+  Model:
+    Precision: ap_fixed<14,6>
+    ReuseFactor: 2
+    Strategy: Resource
+IOType: io_stream
+InputData: null
+KerasModel: !keras_model 'TUDATALLAPOT_QUANTIZED_VER0_312_FULL/keras_model.h5'
+OutputDir: TUDATALLAPOT_QUANTIZED_VER0_312_FULL
+OutputPredictions: null
+ProjectName: myproject
+Stamp: e5BE3B9f
+XilinxPart: xc7z020clg400-1

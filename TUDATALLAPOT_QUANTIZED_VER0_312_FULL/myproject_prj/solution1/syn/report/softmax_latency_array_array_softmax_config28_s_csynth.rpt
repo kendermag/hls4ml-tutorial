@@ -1,0 +1,206 @@
+
+
+================================================================
+== Vivado HLS Report for 'softmax_latency_array_array_softmax_config28_s'
+================================================================
+* Date:           Sun Nov 14 10:24:47 2021
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        myproject_prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     4.092|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    9|    9|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|    127|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      3|     225|      6|    -|
+|Memory           |        3|      -|       0|      0|    -|
+|Multiplexer      |        -|      -|       -|     54|    -|
+|Register         |        0|      -|     387|     96|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        3|      3|     612|    283|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        1|      1|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------------+-----------------------------------+---------+-------+----+----+-----+
+    |                 Instance                |               Module              | BRAM_18K| DSP48E| FF | LUT| URAM|
+    +-----------------------------------------+-----------------------------------+---------+-------+----+----+-----+
+    |myproject_axi_mul_18s_17ns_26_2_1_U2307  |myproject_axi_mul_18s_17ns_26_2_1  |        0|      1|  75|   2|    0|
+    |myproject_axi_mul_18s_17ns_26_2_1_U2308  |myproject_axi_mul_18s_17ns_26_2_1  |        0|      1|  75|   2|    0|
+    |myproject_axi_mul_18s_17ns_26_2_1_U2309  |myproject_axi_mul_18s_17ns_26_2_1  |        0|      1|  75|   2|    0|
+    +-----------------------------------------+-----------------------------------+---------+-------+----+----+-----+
+    |Total                                    |                                   |        0|      3| 225|   6|    0|
+    +-----------------------------------------+-----------------------------------+---------+-------+----+----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    +-----------------+--------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |      Memory     |                            Module                            | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-----------------+--------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |exp_table4_U     |softmax_latency_array_array_softmax_config28_s_exp_table4     |        2|  0|   0|    0|  1024|   17|     1|        17408|
+    |invert_table5_U  |softmax_latency_array_array_softmax_config28_s_invert_tabb1s  |        1|  0|   0|    0|  1024|   18|     1|        18432|
+    +-----------------+--------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total            |                                                              |        3|  0|   0|    0|  2048|   35|     2|        35840|
+    +-----------------+--------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |p_Val2_11_fu_299_p2               |     +    |      0|  0|  25|          18|          18|
+    |ret_V_1_fu_285_p2                 |     +    |      0|  0|  26|          19|          19|
+    |ret_V_fu_270_p2                   |     +    |      0|  0|  25|          18|          18|
+    |io_acc_block_signal_op11          |    and   |      0|  0|   2|           1|           1|
+    |io_acc_block_signal_op85          |    and   |      0|  0|   2|           1|           1|
+    |underflow_fu_318_p2               |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_01001         |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |    or    |      0|  0|   2|           1|           1|
+    |or_ln340_fu_336_p2                |    or    |      0|  0|   2|           1|           1|
+    |select_ln340_fu_352_p3            |  select  |      0|  0|  10|           1|           9|
+    |select_ln388_fu_360_p3            |  select  |      0|  0|  11|           1|          11|
+    |y_V_3_fu_368_p3                   |  select  |      0|  0|  10|           1|          10|
+    |ap_enable_pp0                     |    xor   |      0|  0|   2|           1|           2|
+    |xor_ln340_1_fu_330_p2             |    xor   |      0|  0|   2|           1|           2|
+    |xor_ln340_fu_324_p2               |    xor   |      0|  0|   2|           1|           1|
+    |xor_ln786_fu_312_p2               |    xor   |      0|  0|   2|           1|           2|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0| 127|          68|          98|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------+----+-----------+-----+-----------+
+    |          Name         | LUT| Input Size| Bits| Total Bits|
+    +-----------------------+----+-----------+-----+-----------+
+    |data_V_data_0_V_blk_n  |   9|          2|    1|          2|
+    |data_V_data_1_V_blk_n  |   9|          2|    1|          2|
+    |data_V_data_2_V_blk_n  |   9|          2|    1|          2|
+    |res_V_data_0_V_blk_n   |   9|          2|    1|          2|
+    |res_V_data_1_V_blk_n   |   9|          2|    1|          2|
+    |res_V_data_2_V_blk_n   |   9|          2|    1|          2|
+    +-----------------------+----+-----------+-----+-----------+
+    |Total                  |  54|         12|    6|         12|
+    +-----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                    |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter7      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter8      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter9      |   1|   0|    1|          0|
+    |exp_res_0_V_reg_453          |  17|   0|   17|          0|
+    |exp_res_1_V_reg_459          |  17|   0|   17|          0|
+    |exp_res_2_V_reg_470          |  17|   0|   17|          0|
+    |inv_exp_sum_V_reg_493        |  18|   0|   18|          0|
+    |ret_V_reg_477                |  18|   0|   18|          0|
+    |tmp_data_0_V_reg_520         |  16|   0|   16|          0|
+    |tmp_data_1_V_reg_525         |  16|   0|   16|          0|
+    |tmp_data_2_V_reg_530         |  16|   0|   16|          0|
+    |y_V_1_reg_433                |  10|   0|   10|          0|
+    |y_V_2_reg_438                |  10|   0|   10|          0|
+    |y_V_2_reg_438_pp0_iter1_reg  |  10|   0|   10|          0|
+    |y_V_3_reg_483                |  10|   0|   10|          0|
+    |y_V_reg_428                  |  10|   0|   10|          0|
+    |exp_res_0_V_reg_453          |  64|  32|   17|          0|
+    |exp_res_1_V_reg_459          |  64|  32|   17|          0|
+    |exp_res_2_V_reg_470          |  64|  32|   17|          0|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        | 387|  96|  246|          0|
+    +-----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+-----------------------------------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |                 Source Object                 |    C Type    |
++-------------------------+-----+-----+------------+-----------------------------------------------+--------------+
+|ap_clk                   |  in |    1| ap_ctrl_hs | softmax_latency<array,array,softmax_config28> | return value |
+|ap_rst                   |  in |    1| ap_ctrl_hs | softmax_latency<array,array,softmax_config28> | return value |
+|ap_start                 |  in |    1| ap_ctrl_hs | softmax_latency<array,array,softmax_config28> | return value |
+|ap_done                  | out |    1| ap_ctrl_hs | softmax_latency<array,array,softmax_config28> | return value |
+|ap_idle                  | out |    1| ap_ctrl_hs | softmax_latency<array,array,softmax_config28> | return value |
+|ap_ready                 | out |    1| ap_ctrl_hs | softmax_latency<array,array,softmax_config28> | return value |
+|data_V_data_0_V_blk_n    | out |    1| ap_ctrl_hs | softmax_latency<array,array,softmax_config28> | return value |
+|data_V_data_1_V_blk_n    | out |    1| ap_ctrl_hs | softmax_latency<array,array,softmax_config28> | return value |
+|data_V_data_2_V_blk_n    | out |    1| ap_ctrl_hs | softmax_latency<array,array,softmax_config28> | return value |
+|res_V_data_0_V_blk_n     | out |    1| ap_ctrl_hs | softmax_latency<array,array,softmax_config28> | return value |
+|res_V_data_1_V_blk_n     | out |    1| ap_ctrl_hs | softmax_latency<array,array,softmax_config28> | return value |
+|res_V_data_2_V_blk_n     | out |    1| ap_ctrl_hs | softmax_latency<array,array,softmax_config28> | return value |
+|data_V_data_0_V_dout     |  in |   16|   ap_fifo  |                data_V_data_0_V                |    pointer   |
+|data_V_data_0_V_empty_n  |  in |    1|   ap_fifo  |                data_V_data_0_V                |    pointer   |
+|data_V_data_0_V_read     | out |    1|   ap_fifo  |                data_V_data_0_V                |    pointer   |
+|data_V_data_1_V_dout     |  in |   16|   ap_fifo  |                data_V_data_1_V                |    pointer   |
+|data_V_data_1_V_empty_n  |  in |    1|   ap_fifo  |                data_V_data_1_V                |    pointer   |
+|data_V_data_1_V_read     | out |    1|   ap_fifo  |                data_V_data_1_V                |    pointer   |
+|data_V_data_2_V_dout     |  in |   16|   ap_fifo  |                data_V_data_2_V                |    pointer   |
+|data_V_data_2_V_empty_n  |  in |    1|   ap_fifo  |                data_V_data_2_V                |    pointer   |
+|data_V_data_2_V_read     | out |    1|   ap_fifo  |                data_V_data_2_V                |    pointer   |
+|res_V_data_0_V_din       | out |   16|   ap_fifo  |                 res_V_data_0_V                |    pointer   |
+|res_V_data_0_V_full_n    |  in |    1|   ap_fifo  |                 res_V_data_0_V                |    pointer   |
+|res_V_data_0_V_write     | out |    1|   ap_fifo  |                 res_V_data_0_V                |    pointer   |
+|res_V_data_1_V_din       | out |   16|   ap_fifo  |                 res_V_data_1_V                |    pointer   |
+|res_V_data_1_V_full_n    |  in |    1|   ap_fifo  |                 res_V_data_1_V                |    pointer   |
+|res_V_data_1_V_write     | out |    1|   ap_fifo  |                 res_V_data_1_V                |    pointer   |
+|res_V_data_2_V_din       | out |   16|   ap_fifo  |                 res_V_data_2_V                |    pointer   |
+|res_V_data_2_V_full_n    |  in |    1|   ap_fifo  |                 res_V_data_2_V                |    pointer   |
+|res_V_data_2_V_write     | out |    1|   ap_fifo  |                 res_V_data_2_V                |    pointer   |
++-------------------------+-----+-----+------------+-----------------------------------------------+--------------+
+

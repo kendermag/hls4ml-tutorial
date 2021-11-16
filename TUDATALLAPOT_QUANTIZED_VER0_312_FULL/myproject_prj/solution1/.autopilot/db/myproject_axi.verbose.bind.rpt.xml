@@ -1,0 +1,49 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'myproject_axi'" level="0">
+<item name = "Date">Sun Nov 14 10:23:40 2021
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">myproject_prj</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00, 5.723, 0.62</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">254088, 254088, 65538, 249805, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_myproject_fu_1280">myproject, 254082, 254082, 37009, 249805, dataflow</column>
+<column name="grp_Loop_2_proc_fu_2472">Loop_2_proc, 31, 31, 31, 31, none</column>
+<column name="grp_Loop_1_proc714_fu_2482">Loop_1_proc714, 65537, 65537, 65537, 65537, none</column>
+<column name="grp_Block_myproject_axi_exit38_proc715_fu_2492">Block_myproject_axi_exit38_proc715, 2, 2, 2, 2, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

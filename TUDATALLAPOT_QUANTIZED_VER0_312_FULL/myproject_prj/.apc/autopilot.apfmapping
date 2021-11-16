@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="myproject.cpp" path="/home/nexuscore/EGYETEM/DIPLOMAMUNKA/DATA_ACQUISITION/TUDATALLAPOT_QUANTIZED_VER0_312_FULL/firmware/myproject.cpp"/>
+    <originFiles name="myproject_axi.cpp" path="/home/nexuscore/EGYETEM/DIPLOMAMUNKA/DATA_ACQUISITION/TUDATALLAPOT_QUANTIZED_VER0_312_FULL/firmware/myproject_axi.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="tb_data" path="/home/nexuscore/EGYETEM/DIPLOMAMUNKA/DATA_ACQUISITION/TUDATALLAPOT_QUANTIZED_VER0_312_FULL/tb_data"/>
+    <originFiles name="weights" path="/home/nexuscore/EGYETEM/DIPLOMAMUNKA/DATA_ACQUISITION/TUDATALLAPOT_QUANTIZED_VER0_312_FULL/firmware/weights"/>
+    <originFiles name="myproject_test.cpp" path="/home/nexuscore/EGYETEM/DIPLOMAMUNKA/DATA_ACQUISITION/TUDATALLAPOT_QUANTIZED_VER0_312_FULL/myproject_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
