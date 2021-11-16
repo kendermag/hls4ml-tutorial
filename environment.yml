@@ -14,3 +14,7 @@ dependencies:
     - git+https://github.com/nicologhielmetti/hls4ml@pynq-pr#egg=hls4ml[profiling]
     - git+https://github.com/google/qkeras.git#egg=qkeras
     - scikit-learn
+    - brainflow
+    - asyncio
+    - websockets
+    
